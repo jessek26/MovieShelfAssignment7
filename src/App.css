@@ -271,3 +271,31 @@ body {
   color: #666;
   font-size: 1.1rem;
 }
+
+/* used ai to generate styles for the wathlist button */
+/* Watchlist Button Styles */
+.watchlist-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #333;
+  color: #ffffff;
+  border: 2px solid #555;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s;
+  margin-top: 10px; /* Adds space between Favorite and Watchlist buttons */
+}
+
+.watchlist-button:hover {
+  background-color: #4CAF50; /* Green on hover */
+  border-color: #4CAF50;
+  color: white;
+}
+
+.watchlist-button.added {
+  background-color: #45a049; /* Slightly darker green when added */
+  border-color: #45a049;
+  color: white;
+}

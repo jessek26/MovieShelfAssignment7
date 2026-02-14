@@ -5,6 +5,8 @@ import Favorites from './pages/Favorites';
 import { searchMovies } from './services/movieService';
 import './App.css';
 import { useState, } from 'react';
+import { WatchListProvider } from './contexts/MovieContext.jsx';
+import Watchlist from './pages/Watchlist';
 
 
 
@@ -17,15 +19,18 @@ const handleSearch = async(query) => {
 };
 
   return (
+    <WatchListProvider>
     <Router>
       <div className="app">
         <Header onSearch={handleSearch}/>
         <Routes>
           <Route path="/" element={<Home searchResults={searchResults}/>} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/watchlist" element={<Watchlist />} />
         </Routes>
       </div>
     </Router>
+    </WatchListProvider>
   );
 };
 
